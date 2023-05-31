@@ -8,19 +8,6 @@ window.addEventListener("load", () => {
 })
 
 
-document.querySelector("#filtrar_pendentes").addEventListener("click", () => {
-    let atividadesFiltradas = atividades.filter(atividade => !atividade.concluida)
-    filtrar(atividadesFiltradas)
-})
-document.querySelector("#filtrar_concluidas").addEventListener("click", () => {
-    let atividadesFiltradas = atividades.filter(atividade => atividade.concluida)
-    filtrar(atividadesFiltradas)
-})
-document.querySelector("#limpar_filtro").addEventListener("click", () => {
-    
-    atualizar()
-})
-
 
 
 /****************************************************************** */
@@ -36,7 +23,7 @@ function filtrar(atividades){
     document.querySelector("#atividades").innerHTML = ""
     atividades.forEach((atividade) =>{
         document.querySelector("#atividades").innerHTML 
-                    += createCard(atividade)
+                    += criarCard(atividade)
     })
 }
 /*///////////////////////////////////////////////*/
@@ -50,6 +37,19 @@ document.querySelector("#busca").addEventListener("clear", ()=> {
 })
 
 /****************************************************************** */
+document.querySelector("#filtrar_pendentes").addEventListener("click", () => {
+    let atividadesFiltradas = atividades.filter(atividade => !atividade.concluida)
+    filtrar(atividadesFiltradas)
+})
+document.querySelector("#filtrar_concluidas").addEventListener("click", () => {
+    let atividadesFiltradas = atividades.filter(atividade => atividade.concluida)
+    filtrar(atividadesFiltradas)
+})
+document.querySelector("#limpar_filtro").addEventListener("click", () => {
+    
+    atualizar()
+})
+/*---------------------------------------------*/ 
 function atualizar() {
     localStorage.setItem("atividades", JSON.stringify(atividades))
     document.querySelector("#atividades").innerHTML = ""
@@ -88,7 +88,7 @@ function cadastrar() {
     if (!isValid(atividade.dataI, document.querySelector("#dataI"))) return
     atividades.push(atividade)
     atualizar()  
-   limparCard()
+   
     modal.hide()
 
 }
@@ -107,21 +107,8 @@ function isValid(valor, campo) {
 
 }
 
-
-function limparCard(atividade) { 
-
-
-   // document.querySelector("#titulo").value = ""
-    //document.querySelector("#titulo").classList.
-    //document.querySelector("#categoria").value = aria-label="selecione a categoria">
-   //document.querySelector("#dataI").value = ""
-   //document.querySelector("#pontos").value = "1"
-  // document.querySelector("#obs").value = ""
-}
-
-
 function apagar(id){
-    /*botao.parentNode.parentNode.parentNode.remove()*/
+   
     atividades = atividades.filter(atividade => atividade.id !== id)
     atualizar()
 }

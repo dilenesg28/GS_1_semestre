@@ -11,19 +11,36 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"crossorigin="anonymous"></script>  
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
   
 </head>
 
+<header>
+  
+  <img id="cabecalho" src="./assets/image/fundo de cabecalho.png" alt="">
+  <h1 id="titulo_cabecalho">Cadastramento de consumo de água</h1>              
+  
+</header>
+<!--
+  <img class="Circulo" src="./assets/image/agua-ralo.png" alt="agua pelo ralo">
+-->
 <body>
   <!-- começa o controle do Menu de comandos -->
   
   <!--        expandi o conteudo da linha                aumenta a fonte            muda a cor de fundo do navbar-->
   <nav class="navbar bg-blue navbar navbar-expand-lg  navbar-brand mb-0 h1 " style="background-color:#5F9EA0;">
     <div class="container-fluid">
-      <img src="./assets/image/autoescola.png" alt="Logotipo" width="50" height="30"
-        class="d-inline-block align-text-top">
+      <!--   
+      <img src="./assets/image/autoescola.png" alt="Logotipo" width="50" height="30" class="d-inline-block align-text-top">
+    -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -37,8 +54,8 @@
                 aria-expanded="false">Atividade</a>
               <ul class="dropdown-menu">
                 
-                <li><a id="filtrar_pendentes"  class="dropdown-item" href="#">Pendentes</a></li>
-                <li><a id="filtrar_concluidas" class="dropdown-item" href="#">Concluídas</a></li>
+                <li><a id="filtrar_pendentes"  class="dropdown-item" href="#">Contas à vencer</a></li>
+                <li><a id="filtrar_concluidas" class="dropdown-item" href="#">Pagas</a></li>
                 <li><a id="limpar_filtro"      class="dropdown-item" href="#">Limpar Filtro</a></li>
                 <li><hr class="dropdown-divider" style="background-color: crimson;"></li>
                 <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastrar Atividade</a></li>
@@ -57,16 +74,75 @@
       </div>
     </div>
   </nav>
-    <main class="container" style="background-color: #DCDCDC;">
-     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Cadastrar
-    </button>
+                          <!-- style="background-color: #716e6e;" -->
+  <main class="container"                                         >
+      <!-- 
+      <a href="Cards" id="botao_corpo"> Acesse as fotos </a>   
+Button trigger modal -->                                                                   <!--  -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="botao_corpo" >
+        Cadastrar
+        
+      </button>
+     
+      
+      <section id="Cards">
+        <ul>
+          
+          <li class="card">
+              
+            <div class="card-image">
+              <h3>A escassez de água doce</h3>
+              <img src="./assets/image/globo-sem-agua.png" alt="Dados OMS, sobre aguá doce">
+            </div>
+            <div class="card-info">
+              <h3>Segundo a Organização Mundial da Saúde (OMS), 
+                      uma em cada três pessoas no mundo – 
+                      não têm acesso a serviços de saneamento básico e água potável. asasfafaf ssadsa </h3>                   
+            </div>
+          </li>
+          <li class="card">
+              
+            <div class="card-image">
+              <h3>Uso Racional da Água.</h3>
+              <img src="./assets/image/torneira.png" alt="Dados OMS, sobre aguá doce">
+            </div>
+            <div class="card-info">
+              <h3>
+                    * O banho deve ser rápido. <br>
+                    * Não use o vaso sanitário como lixeira. <br>
+                    * Adote o hábito de usar a vassoura, para limpar <br>
+                    a calçada e o quintal.</h3>                   
+            </div>
+          </li>
+          <li class="card">
+              
+            <div class="card-image">
+              <h3>Dia Mundial da Água</h3>
+              <img src="./assets/image/consumo.png" alt="Dados OMS, sobre aguá doce">
+            </div>
+            <div class="card-info">
+              <h3> Dia 22 de março é celebrado o Dia Mundial da Água.
+                 Precisamos preservar este recurso para garantir a sobrevivência 
+                 de todos. </h3>                   
+            </div>
+          </li>            
+        </ul> 
 
-    <div id="atividades" class="row mx-auto my-2 g-3">
-    </div> <!--row -->
+
+    </section>
+    <section id="ingressos">
+        <div class="box linearGradientVertical">
+          <h2 id="titulo_relatorio">Cadastramento de consumo de água</h2>
+            <div id="atividades" class="row mx-auto my-2 g-3">
+        
+            </div> <!--row -->  
+        </div> 
+      
+    </section>
+    
+      
   </main>
-
+  
 
 
   <!-- Modal -->
@@ -95,9 +171,9 @@
               <div class="col-12">
                 <select id="categoria" class="form-select" aria-label="selecione a categoria">
                   <option selected>selecione a categoria</option>
-                  <option value="Aula teorica">Aula teorica</option>
-                  <option value="Aula prática">Aula prática</option>
-                  <option value="Exame DETRAN">Exame DETRAN</option>
+                  <option value="Lavar_louça">Lavar louça</option>
+                  <option value="Lavar_roupa">Lavar roupa</option>
+                  <option value="Escovar_dentes">Escovar dentes</option>
                 </select>         
               </div>
               <div class="col-12">
@@ -115,9 +191,11 @@
     </div>
   </div>
 
-    
-  <script src="./crud.js"></script>
-  <script src=""></script>
+  
+
+
+  <script src="./assets/js/crud.js"></script>
+  <script src="./assets/js/filtro.js"></script>
  
 </body>
 

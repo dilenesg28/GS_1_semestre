@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    
+    height: 30vh;
+    
+}
+#cabecalho{
+    width: 100%;
+    height:99%;
+}
+nav{
+    width: 100%;
+}
+#titulo_cabecalho{   
+    position: absolute; 
+    padding-left: 52rem;
+    padding-top: 3.5rem;
+    background-image: linear-gradient(to right, #CC25D8A8, #02CFF4FA);
+    background-clip: text;
+    -webkit-background-clip: text; /* para navegadores WebKit */
+    color: transparent;    
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+body {
+  /*  background-color: #ABBAEA;*/
+    background-image:url(../image/fundo\ do\ corpo.png);
+
+    background-size:contain;
+  /*  background-repeat: no-repeat;*/
+
+}
+.linearGradientVertical {
+    background-image: linear-gradient(#0a079f,#9ecee0);
+  
+  }
+
+
+
+
+.card{ 
+    background-color: #40f0d6;
+    position: relative; 
+    cursor: pointer;
+} 
+.card:hover .card-image{
+    opacity: 1; 
+} 
+.card:hover .card-info{ 
+    opacity: 1;
+     bottom: 15%;
+     }
+ #Cards ul{ 
+   /* background-color: #212121;*/
+    display: flex; 
+    list-style: none;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px;
+    
+} 
+ .card-image img { 
+    height: 400px; 
+    width: 350px; 
+    border-radius: 40px; 
+    padding: 20px;
+   
+    
+    
+} 
+/*============================LEGENDA DOS CARDS===========================*/
+ .card-info{ 
+    position: absolute; 
+    bottom: 0;
+    color: #000000;
+    opacity: 0;
+    transition: opacity .5s ease-in-out, bottom .5s;
+    font-family: var(--font-heading);
+    font-size: 5px;
+   
+   /*padding-left: 30px;*/
+    padding: 20px;
+ } 
+ /*============================ALTERA EM TODO O CARD===========================*/
+ #Cards li{ 
+    
+    position: relative;
+    text-align: center;
+    top: 0;
+   padding-left: -10px;
+ 
+ }
+ #botao_corpo{
+    /*background: linear-gradient(90deg, #070707, #09070a);
+    margin-left: 30rem;*/
+    margin: 0.5rem;
+    /*padding: 1rem 3rem;*/
+    border-radius: 30px;
+    color: #FFF;
+    /*font-size: 4rem;*/
+    text-decoration: none;
+    text-align: center;
+}
+#botao_corpo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #a8ee83 ;
+}
+
+img.Circulo{
+    border-radius: 50%;   
+    height: 50px; 
+    width: 50px;
+    animation: zoom 5s ease-in-out;   
+    padding: 0.5rem;
+  
+    /*animation: zoom 5s ease-in-out alternate-reverse;*/
+}
+/*transição de zoom*/
+@keyframes zoom { 
+    0% {
+        transform: scale(0.5, 0.5);
+      }
+      50% {
+        transform: scale(1.3, 1.3);
+      }
+      100% {
+        transform: scale(1,1);
+      }
+     
+    }
+
+
+
+/*------------inserido para o formulário.--------------------------------------------*/
+#ingressos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* background-color: #212121;*/
+}
+
+
+
+#ingressos{
+    grid-column: 2;
+}
+
+#ingressos h3{
+    position: absolute;
+    top: -10%;
+    left: 1rem;
+    background-color: #6A3093;
+    color: #FFF;
+    padding: .7rem;
+    border-radius: 5px;
+}
+input[type=number]{
+    padding: .5rem;
+    background-color: #807b7b94;
+    color: var(--color-default);
+    border: none;
+    border-radius: .3rem;
+}
+
+#titulo_relatorio{   
+    
+    background-image: linear-gradient(90.01deg, #DF3FC8A8 20.86%, #DF3FC8FA 50.92%, #DF3FC8A8 83.71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text: transparent;
+    font-family:'Times New Roman', Times, serif;
+   
