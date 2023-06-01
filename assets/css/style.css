@@ -7,14 +7,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
-    
+    gap: 0.5rem;    
     height: 30vh;
     
 }
 #cabecalho{
     width: 100%;
-    height:99%;
+    height:100%;
 }
 nav{
     width: 100%;
@@ -44,7 +43,16 @@ body {
   
   }
 
-
+  #section-projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+   padding: 4rem;    
+    background-color: #a9f3dc;
+    width: 100%;
+  
+}
 
 
 .card{ 
@@ -69,8 +77,10 @@ body {
     
 } 
  .card-image img { 
+    /*display: flex; 
+    position: relative;*/
     height: 400px; 
-    width: 350px; 
+    width: 350px;
     border-radius: 40px; 
     padding: 20px;
    
@@ -92,7 +102,7 @@ body {
  } 
  /*============================ALTERA EM TODO O CARD===========================*/
  #Cards li{ 
-    
+    display: flex; 
     position: relative;
     text-align: center;
     top: 0;
@@ -100,9 +110,9 @@ body {
  
  }
  #botao_corpo{
-    /*background: linear-gradient(90deg, #070707, #09070a);
-    margin-left: 30rem;*/
-    margin: 0.5rem;
+    background: linear-gradient(90deg, #070707, #09070a);
+   /* margin-left: 30rem;*/
+    /*margin: 0.5rem;*/
     /*padding: 1rem 3rem;*/
     border-radius: 30px;
     color: #FFF;
@@ -113,12 +123,13 @@ body {
 #botao_corpo:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px #a8ee83 ;
+   
 }
 
 img.Circulo{
     border-radius: 50%;   
-    height: 50px; 
-    width: 50px;
+    height: 100px; 
+    width: 100px;
     animation: zoom 5s ease-in-out;   
     padding: 0.5rem;
   
@@ -138,6 +149,20 @@ img.Circulo{
      
     }
 
+/*----*/
+#secao_meio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-color: #212121;
+   padding-top: 1rem;
+}
+#secao_meio_div{
+  padding-top: 5rem;
+}
+
+
+
 
 
 /*------------inserido para o formulário.--------------------------------------------*/
@@ -151,7 +176,7 @@ img.Circulo{
 
 
 #ingressos{
-    grid-column: 2;
+    grid-column: 2px;
 }
 
 #ingressos h3{
@@ -179,4 +204,6 @@ input[type=number]{
     background-clip: text;
     text: transparent;
     font-family:'Times New Roman', Times, serif;
-   
+
+    padding: .7rem;
+} 

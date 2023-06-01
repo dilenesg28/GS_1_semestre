@@ -19,28 +19,17 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-
   
 </head>
 
-<header>
-  
+<header>  
   <img id="cabecalho" src="./assets/image/fundo de cabecalho.png" alt="">
-  <h1 id="titulo_cabecalho">Cadastramento de consumo de água</h1>              
-  
-</header>
-<!--
-  <img class="Circulo" src="./assets/image/agua-ralo.png" alt="agua pelo ralo">
--->
+  <h1 id="titulo_cabecalho">
+    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastramento de consumo de água</a>
+  </h1>           
 <body>
-  <!-- começa o controle do Menu de comandos -->
-  
-  <!--        expandi o conteudo da linha                aumenta a fonte            muda a cor de fundo do navbar-->
   <nav class="navbar bg-blue navbar navbar-expand-lg  navbar-brand mb-0 h1 " style="background-color:#5F9EA0;">
     <div class="container-fluid">
-      <!--   
-      <img src="./assets/image/autoescola.png" alt="Logotipo" width="50" height="30" class="d-inline-block align-text-top">
-    -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -51,21 +40,21 @@
           <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">Atividade</a>
+                aria-expanded="false">Conta</a>
               <ul class="dropdown-menu">
                 
-                <li><a id="filtrar_pendentes"  class="dropdown-item" href="#">Contas à vencer</a></li>
-                <li><a id="filtrar_concluidas" class="dropdown-item" href="#">Pagas</a></li>
+                <li><a id="filtrar_pendentes"  class="dropdown-item" href="#">Gasto pendente de analise</a></li>
+                <li><a id="filtrar_concluidas" class="dropdown-item" href="#">Gasto analisado</a></li>
                 <li><a id="limpar_filtro"      class="dropdown-item" href="#">Limpar Filtro</a></li>
                 <li><hr class="dropdown-divider" style="background-color: crimson;"></li>
-                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastrar Atividade</a></li>
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastrar Gasto</a></li>
               </ul>
             </li>
         </ul>
         <form class="d-flex" role="search">
           <input id="busca" class="form-control me-2" type="search" placeholder="filtrar" aria-label="filtrar" style="background: #e9eb87;">
           <button class="btn btn-light" type="submit">Buscar</button>
-          <!-- para mostrar que há notificações pendentes de serem lidas ou atividades a cumprir -->
+          <!-- para mostrar que há notificações pendentes de serem lidas  -->
           <button type="button" class="btn btn-primary">
             Notificações <span class="badge text-bg-secondary"></span>
           </button>
@@ -74,20 +63,17 @@
       </div>
     </div>
   </nav>
-                          <!-- style="background-color: #716e6e;" -->
-  <main class="container"                                         >
-      <!-- 
-      <a href="Cards" id="botao_corpo"> Acesse as fotos </a>   
-Button trigger modal -->                                                                   <!--  -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="botao_corpo" >
-        Cadastrar
-        
-      </button>
-     
-      
+                       
+  <main class="container"                                         >     
+<section id="section-projects">  
+       
+  
+  <h3 id="h3dasnoticias" >Noticias & Dicas</h3>  
+  <img class="Circulo" src="./assets/image/gota dagua.png" alt="gota d'agua">
+
+</section>      
       <section id="Cards">
-        <ul>
-          
+        <ul>          
           <li class="card">
               
             <div class="card-image">
@@ -100,8 +86,7 @@ Button trigger modal -->                                                        
                       não têm acesso a serviços de saneamento básico e água potável. asasfafaf ssadsa </h3>                   
             </div>
           </li>
-          <li class="card">
-              
+          <li class="card">              
             <div class="card-image">
               <h3>Uso Racional da Água.</h3>
               <img src="./assets/image/torneira.png" alt="Dados OMS, sobre aguá doce">
@@ -130,29 +115,33 @@ Button trigger modal -->                                                        
 
 
     </section>
-    <section id="ingressos">
-        <div class="box linearGradientVertical">
-          <h2 id="titulo_relatorio">Cadastramento de consumo de água</h2>
-            <div id="atividades" class="row mx-auto my-2 g-3">
-        
-            </div> <!--row -->  
-        </div> 
-      
+    <section id="secao_meio">
+      <div >
+        <h2 id="titulo_relatorio">Historico de consumo de água</h2>   
+      </div id="secao_meio_div">
+      <a href="#exampleModal">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="botao_corpo" >        
+          Cadastrar          
+        </button>
+      </a>
+
     </section>
-    
-      
+
+    <section id="card">      
+        <div class="box linearGradientVertical">          
+          <div id="contas" class="row mx-auto my-2 g-3">        
+          </div> <!--row -->  
+        </div>       
+    </section>
   </main>
-  
-
-
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <!--                        Mudando a cor do formulário  style="background-color: #316aaf;" -->
         <div class="modal-content" style="background:#6495ED;">
-          <div class="modal-header" style="background: #cd48df;">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Atividade</h1>
+          <div class="modal-header" style="background: #ade8e3;">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Gasto</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
           </div>
           <div class="modal-body">
@@ -161,7 +150,7 @@ Button trigger modal -->                                                        
                 <input id="titulo" type="text" class="form-control" placeholder="título" aria-label="título">
               </div>
               <div class="col-12">
-                <input id="pontos" type="number" value="1" class="form-control" placeholder="pontos" aria-label="pontos">
+                <input id="litros" type="number" value="1" class="form-control" placeholder="Litros" aria-label="Litros">
               </div>
               <div class="col-12">
                 <div class="input-group date">
@@ -174,6 +163,8 @@ Button trigger modal -->                                                        
                   <option value="Lavar_louça">Lavar louça</option>
                   <option value="Lavar_roupa">Lavar roupa</option>
                   <option value="Escovar_dentes">Escovar dentes</option>
+                  <option value="Lavar_calcada">Lavar calçadas</option>
+
                 </select>         
               </div>
               <div class="col-12">
@@ -183,20 +174,14 @@ Button trigger modal -->                                                        
             </div>
           </div>
         </div>
-        <div class="modal-footer" style="background: #cd48df;">
+        <div class="modal-footer" style="background: #234ee9;">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           <button id="salvar" type="button" class="btn btn-info">Salvar</button>
         </div>
       </div>
     </div>
   </div>
-
-  
-
-
-  <script src="./assets/js/crud.js"></script>
-  <script src="./assets/js/filtro.js"></script>
- 
+  <script src="./assets/js/crud.js"></script> 
 </body>
 
 </html>
